@@ -21,10 +21,11 @@ int main ()
 
             cin >> mark;
         
-            int sum = mark;
-            for (int val : m[name]) {
+            ll sum = mark;
+            for (ll val : m[name]) {
                 sum += val;
             }
+            m[name].clear();
             m[name].push_back(sum);
         }
 
@@ -35,7 +36,12 @@ int main ()
         }
 
         else{
-            cout << m[name].back() << endl;
+            if (m.count(name) && !m[name].empty()) {
+                cout << m[name].back() << endl;
+            } 
+            else {
+                cout << 0 << endl;
+            }
         }
     }
 
