@@ -16,18 +16,13 @@ int main() {
         }
         sort(a, a+n);
         sum = a[0];
-
+        
         for (ll i = 1; i < n; i++){
             sum += a[i];
             result += sum;
         }
-        if(result == 0){
-            cout << sum << endl;
-        }
-        else{
-            cout << result << endl;
-        }
         
+        cout << result << endl;
         cin >> n;
     }
 
